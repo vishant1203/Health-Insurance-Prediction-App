@@ -3,7 +3,7 @@ import numpy as np
 from prediction_helper import predict
 
 # --- Page Config ---
-st.set_page_config(page_title="Health Insurance Premium App-Vishant", page_icon="💰", layout="wide")
+st.set_page_config(page_title="Vishant", page_icon="💰", layout="wide")
 
 # --- Title ---
 st.markdown("<h1 style='text-align: center; color: #2E86C1;'>💰 Health Insurance Premium Prediction</h1>", unsafe_allow_html=True)
