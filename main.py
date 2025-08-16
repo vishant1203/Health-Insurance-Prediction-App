@@ -2,66 +2,58 @@ import streamlit as st
 import numpy as np
 from prediction_helper import predict
 
-#--Title
-st.title("Health Insurance Premium Prediction App(Vishant)")
+# --- Page Config ---
+st.set_page_config(page_title="Health Insurance Premium App", page_icon="💰", layout="wide")
 
+# --- Title ---
+st.markdown("<h1 style='text-align: center; color: #2E86C1;'>💰 Health Insurance Premium Prediction</h1>", unsafe_allow_html=True)
+st.write("### Fill in the details below to estimate your insurance premium:")
 
-col1, col2, col3=st.columns(3)
-col4, col5, col6=st.columns(3)
-col7, col8, col9=st.columns(3)
-col10, col11, col12=st.columns(3)
-col13,col14, col15=st.columns(3)
+# --- Layout ---
+with st.container():
+    col1, col2 = st.columns(2)
 
-with col1:
-    Age = st.number_input("Age", min_value=0, max_value=120, value=30)
-with col2:
-    Gender = st.selectbox("Gender", ['Male', 'Female'])
-with col3:
-    Region = st.selectbox("Region", ['Northwest', 'Southeast', 'Northeast', 'Southwest'])
-with col4:
-    Marital_status = st.selectbox("Marital Status", ['Unmarried', 'Married'])
-with col5:
-    BMI_Category = st.selectbox("BMI Category", ['Normal', 'Obesity', 'Overweight', 'Underweight'])
-with col6:
-    Smoking_Status = st.selectbox("Smoking Status", ['No Smoking', 'Regular', 'Occasional'])
-with col7:
-    Employment_Status = st.selectbox("Employment Status", ['Salaried', 'Self-Employed', 'Freelancer', 'NA'])
-with col8:
-    Income_Level = st.selectbox("Income Level", ['<10L', '10L - 25L', '> 40L', '25L - 40L', 'NA'])
-with col9:
-    Medical_History = st.selectbox("Medical History", [
-    'Diabetes', 'High blood pressure', 'No Disease',
-    'Diabetes & High blood pressure', 'Thyroid', 'Heart disease',
-    'High blood pressure & Heart disease', 'Diabetes & Thyroid', 'Diabetes & Heart disease'
-    ])
-with col10:
-    Insurance_Plan = st.selectbox("Insurance Plan", ['Bronze', 'Silver', 'Gold'])
-with col11:
-    Number_Of_Dependants = st.number_input("Number of Dependants", min_value=0, value=0)
-with col12:
-    Income_Lakhs = st.number_input("Income (Lakhs)", min_value=0.0, value=5.0)
-with col13:
-    Genetical_Risk = st.number_input("Genetical Risk", min_value=0, max_value=100, value=1)
+    with col1:
+        Age = st.number_input("Age", min_value=0, max_value=120, value=30)
+        Gender = st.selectbox("Gender", ['Male', 'Female'])
+        Region = st.selectbox("Region", ['Northwest', 'Southeast', 'Northeast', 'Southwest'])
+        Marital_status = st.selectbox("Marital Status", ['Unmarried', 'Married'])
+        BMI_Category = st.selectbox("BMI Category", ['Normal', 'Obesity', 'Overweight', 'Underweight'])
+        Smoking_Status = st.selectbox("Smoking Status", ['No Smoking', 'Regular', 'Occasional'])
 
+    with col2:
+        Employment_Status = st.selectbox("Employment Status", ['Salaried', 'Self-Employed', 'Freelancer', 'NA'])
+        Income_Level = st.selectbox("Income Level", ['<10L', '10L - 25L', '25L - 40L', '> 40L', 'NA'])
+        Medical_History = st.selectbox("Medical History", [
+            'No Disease', 'Diabetes', 'High blood pressure',
+            'Diabetes & High blood pressure', 'Thyroid', 'Heart disease',
+            'High blood pressure & Heart disease', 'Diabetes & Thyroid', 'Diabetes & Heart disease'
+        ])
+        Insurance_Plan = st.selectbox("Insurance Plan", ['Bronze', 'Silver', 'Gold'])
+        Number_Of_Dependants = st.number_input("Number of Dependants", min_value=0, value=0)
+        Income_Lakhs = st.number_input("Annual Income (Lakhs)", min_value=0.0, value=5.0)
+        Genetical_Risk = st.slider("Genetical Risk (%)", min_value=0, max_value=100, value=1)
+
+# --- Input Dictionary ---
 input_data = {
-        'Gender': Gender,
-        'Region': Region,
-        'Marital_status': Marital_status,
-        'BMI_Category': BMI_Category,
-        'Smoking_Status': Smoking_Status,
-        'Employment_Status': Employment_Status,
-        'Income_Level': Income_Level,
-        'Medical_History': Medical_History,
-        'Insurance_Plan': Insurance_Plan,
-        'Age': Age,
-        'Number_Of_Dependants': Number_Of_Dependants,
-        'Income_Lakhs': Income_Lakhs,
-        'Genetical_Risk': Genetical_Risk
-    }
+    'Gender': Gender,
+    'Region': Region,
+    'Marital_status': Marital_status,
+    'BMI_Category': BMI_Category,
+    'Smoking_Status': Smoking_Status,
+    'Employment_Status': Employment_Status,
+    'Income_Level': Income_Level,
+    'Medical_History': Medical_History,
+    'Insurance_Plan': Insurance_Plan,
+    'Age': Age,
+    'Number_Of_Dependants': Number_Of_Dependants,
+    'Income_Lakhs': Income_Lakhs,
+    'Genetical_Risk': Genetical_Risk
+}
 
-if st.button("Calculate Premium"):
-    prediction=predict(input_data)
-    st.success(f'Predicted Heath insurance cost: {prediction}')
-
-
+# --- Prediction Button ---
+st.markdown("<br>", unsafe_allow_html=True)  # spacing
+if st.button("🔍 Calculate Premium", use_container_width=True):
+    prediction = predict(input_data)
+    st.success(f"✅ Predicted Health Insurance Cost: **₹ {prediction}**")
 
