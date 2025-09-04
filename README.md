@@ -1,8 +1,7 @@
 # 🏥 Predictive Health Insurance Premium Model  
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue.svg)  
-![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-brightgreen.svg)  
-![License](https://img.shields.io/badge/License-MIT-orange.svg)  
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-brightgreen.svg)   
 
 A machine learning project to predict **health insurance premiums** based on factors like **age, BMI, smoking habits, and medical history**.  
 
@@ -11,15 +10,15 @@ A machine learning project to predict **health insurance premiums** based on fac
 ---
 
 ## 📚 Table of Contents  
-- [Project Overview](#-project-high-level-overview)  
-- [Business Process Evolution](#-business-process-evolution)  
-  - [📄 Before IT Systems (~2008)](#-before-it-systems--2008)  
-  - [💻 After IT Systems (~2009-onwards)](#-after-it-systems--2009-onwards)  
-  - [🤖 Machine Learning Era (~2015 onwards)](#-current-approach-machine-learning-era--2015-onwards)  
-- [Objectives](#-objectives)  
-- [Key Features](#-key-features)  
-- [Tech Stack](#-tech-stack)  
-- [Live Demo](#-live-demo) 
+- [Project Overview](#project-high-level-overview)  
+- [Business Process Evolution](#business-process-evolution)  
+  - [Before IT Systems (~2008)](#before-it-systems--2008)  
+  - [After IT Systems (~2009 onwards)](#after-it-systems--2009-onwards)  
+  - [Machine Learning Era (~2015 onwards)](#current-approach-machine-learning-era--2015-onwards)  
+- [Objectives](#objectives)  
+- [Key Features](#key-features)  
+- [Tech Stack](#tech-stack)  
+- [Live Demo](#live-demo)  
 
 ---
 
