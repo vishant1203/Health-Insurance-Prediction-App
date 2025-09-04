@@ -18,7 +18,7 @@ The solution has two phases:
 
 ## 📌 Business Process Evolution  
 
-### 🔹 As-Is Business Process (Before IT Systems – ~2008)  
+### 🔹 Before IT Systems – ~2008
 1. Applicant fills out a **paper application**.  
 2. Insurance agent submits the application & documents.  
 3. Imaging team scans the paper form into the system.  
@@ -33,7 +33,7 @@ The solution has two phases:
 
 ---
 
-### 🔹 To-Be Business Process (After IT Systems – ~2009 onwards)  
+### 🔹 After IT Systems – ~2009 onwards
 1. Applicant submits application via **website/online portal**.  
 2. Underwriter reviews the application → approves or rejects.  
 3. Results are **emailed** to the applicant.  
