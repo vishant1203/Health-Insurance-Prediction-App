@@ -14,11 +14,11 @@ A machine learning project to predict **health insurance premiums** based on fac
 - [Business Process Evolution](#business-process-evolution)  
   - [Before IT Systems (~2008)](#before-it-systems--2008)  
   - [After IT Systems (~2009 onwards)](#after-it-systems--2009-onwards)  
-  - [Machine Learning Era (~2015 onwards)](#current-approach-machine-learning-era--2015-onwards)  
+  - [Machine Learning Era (~2015 onwards)](#current-approach-machine-learning-era-2015-onwards)  
 - [Objectives](#objectives)  
 - [Key Features](#key-features)  
 - [Tech Stack](#tech-stack)  
-- [Live Demo](#live-demo)  
+- [Live Demo](#live-demo) 
 
 ---
 
@@ -59,7 +59,7 @@ The solution has two phases:
 - GLMs were **regulator-friendly, explainable, and industry standard**.  
 
 **Example Formula:**  
--Premium = Base Rate + β1(Age) + β2(Smoker) + β3(BMI) + β4(Pre-existing condition)
+--Premium = Base Rate + β1(Age) + β2(Smoker) + β3(BMI) + β4(Pre-existing condition)
 
 ---
 
@@ -101,4 +101,4 @@ With machine learning, insurers can:
 ## ⚡Live Demo
 https://health-insurance-premium-calculation.streamlit.app/
 
- *Try out the model directly here →* [Health Insurance Premium Calculator](https://health-insurance-premium-calculation.streamlit.app/)
+*Try out the model directly here →* [Health Insurance Premium Calculator](https://health-insurance-premium-calculation.streamlit.app/)
