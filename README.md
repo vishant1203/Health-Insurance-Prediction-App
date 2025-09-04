@@ -19,10 +19,7 @@ A machine learning project to predict **health insurance premiums** based on fac
 - [Objectives](#-objectives)  
 - [Key Features](#-key-features)  
 - [Tech Stack](#-tech-stack)  
-- [System Workflow](#-system-workflow)  
-- [Run Locally](#️-run-locally)  
-- [Future Scope](#-future-scope)  
-- [Live Demo](#-live-demo)  
+- [Live Demo](#-live-demo) 
 
 ---
 
@@ -102,11 +99,7 @@ With machine learning, insurers can:
 
 ---
 
-## 🔄 System Workflow  
+## ⚡Live Demo
+https://health-insurance-premium-calculation.streamlit.app/
 
-```mermaid
-flowchart LR
-    A[User Inputs (Age, BMI, Smoker, Medical History)] --> B[Data Preprocessing]
-    B --> C[ML Model Prediction]
-    C --> D[Predicted Premium]
-    D --> E[Streamlit Web App UI]
+ *Try out the model directly here →* [Health Insurance Premium Calculator](https://health-insurance-premium-calculation.streamlit.app/)
